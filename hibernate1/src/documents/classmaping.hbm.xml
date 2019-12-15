@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="beans.Customer" table="customer" schema="system">
+<id name="cid" column="cid"/>
+<property name="cname"/>
+<property name="cemail"/>
+
+<property name="phone" />
+
+
+</class>
+
+</hibernate-mapping>
