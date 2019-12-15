@@ -20,16 +20,21 @@ public class Client {
 		SessionFactory sf=cfg.buildSessionFactory();
 		Session session=sf.openSession();
 		Transaction t=session.beginTransaction();
-		//session.saveOrUpdate(s);
-		//session.save(s);
-		//	session.get(Student.class, 112);
-		//session.update(s);
-		//session.merge(s);
-		session.delete(s);
+		//session.saveOrUpdate(s);//it will insert data and if in db have same object then update data
+		
+		//session.save(s);it will insert data and return primary key value
+		
+		//	session.get(Student.class, 112);it is select the data in the table
+		
+		//session.update(s);it is update data in the table if have in table we want to enter all non primary values to update
+		//session.merge(s);it is not check duplicate or not it will update data inthe table
+		session.delete(s);//it will delete the row from the table
+		
 		
 		//Object o=session.get(Student.class, 116); it give null pointer exception
 		//Object o=session.load(Student.class,116); it give Object Not found exception
-		Object o=session.get(Student.class, 112);
+		Object o=session.get(Student.class, 112);//it will select the data in the particular table
+		
 		
 		Student tem=(Student)o;
 		System.out.println(tem.getSid());
