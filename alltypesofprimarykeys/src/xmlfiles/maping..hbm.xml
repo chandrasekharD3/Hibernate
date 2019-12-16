@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="beans.actors" table="actor" schema="system">
+
+
+<id name="aid" >
+<generator class="sequence"/>
+</id>
+<property name="aname"/>
+<property name="startag"/>
+<property name="indes"/>
+
+</class>
+</hibernate-mapping>
+
+
+
