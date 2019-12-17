@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="custompkautoincrement.pojo" table="iciciac" schema="system">
+<id name="acno" >
+	<generator class="custompkautoincrement.acgenarator"></generator>
+	</id>
+    
+<property name="name"/>
+<property name="phno"/>
+<property name="address"/>
+<property name="adno"/>
+</class>
+
+
+</hibernate-mapping>
